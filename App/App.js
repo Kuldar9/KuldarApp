@@ -1,3 +1,9 @@
+// App.js - main application 
+/* Instructions:
+    make sure all the dependencies are installed
+    run the project: "npm start"
+*/
+
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

@@ -1,14 +1,21 @@
+// Server.js for starting the server
+/*
+    Just open git bash in the same folder as server.js
+    run server: node ./server.js
+*/
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 const userRoutes = require('./models/routes/userRoutes');
 
 // Import the script to start MongoDB server
 const { mongoDBDataDir } = require('./scripts/startMongoDB');
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 25575;
 
 // Create a writable stream to log to a file
