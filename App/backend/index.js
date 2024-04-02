@@ -1,4 +1,4 @@
-// index.js
+/*// index.js
 const axios = require('axios');
 
 const SERVER_URL = 'http://90.191.79.223:25575'; // Update with your server URL
@@ -24,5 +24,7 @@ const fetchMessagesFromServer = async () => {
 
 module.exports = {
     sendMessageToServer,
-    fetchMessagesFromServer
+    fetchMessagesFromServer,
+    SERVER_URL
 };
+*/

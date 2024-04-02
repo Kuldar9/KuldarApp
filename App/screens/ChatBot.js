@@ -1,12 +1,14 @@
+// ChatBot.js
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, Button, FlatList, Text } from 'react-native';
 import axios from 'axios';
-
-const SERVER_URL = 'http://90.191.79.223:25575'; // Replace with your server's IP and port
+import { useTheme } from '../Themes/ThemeProvider';
+import { SERVER_URL } from '../Backend/index'; // Import the SERVER_URL
 
 const ChatBot = () => {
   const [inputMessage, setInputMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const { buttonStyle, buttonTextStyle } = useTheme(); // Get button styles from theme
 
   useEffect(() => {
     fetchAndDisplayMessages();
@@ -48,7 +50,7 @@ const ChatBot = () => {
         onChangeText={text => setInputMessage(text)}
         value={inputMessage}
       />
-      <Button title="Send" onPress={handleMessageSend} />
+      <Button title="Send" onPress={handleMessageSend} style={buttonStyle} textStyle={buttonTextStyle} />
     </View>
   );
 };
