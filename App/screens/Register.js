@@ -8,7 +8,6 @@ const RegisterScreen = ({ navigation }) => {
     
     return (
         <View>
-            {/* Add your register screen UI elements here */}
             <Button
                 title="Register"
                 onPress={() => {
@@ -17,7 +16,6 @@ const RegisterScreen = ({ navigation }) => {
                 style={buttonStyle}
                 textStyle={buttonTextStyle}
             />
-            {/* Add other buttons or UI elements as needed */}
         </View>
     );
 }

@@ -38,3 +38,5 @@ return child;
 };
 
 export default ComponentManager;
+
+// Ruined it with AutoLayoutUpdater, didn't get it to work properly yet.

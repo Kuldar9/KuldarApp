@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { View, TextInput, Button, FlatList, Text } from 'react-native';
 import axios from 'axios';
 import { useTheme } from '../Themes/ThemeProvider';
-import { SERVER_URL } from '../Backend/index'; // Import the SERVER_URL
+import { SERVER_URL } from '../Backend/index'; 
 
 const ChatBot = () => {
   const [inputMessage, setInputMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const { buttonStyle, buttonTextStyle } = useTheme(); // Get button styles from theme
+  const { buttonStyle, buttonTextStyle } = useTheme(); // Get button styles from theme - important
 
   useEffect(() => {
     fetchAndDisplayMessages();
@@ -23,7 +23,7 @@ const ChatBot = () => {
         await fetchAndDisplayMessages();
       } catch (error) {
         console.error('Error sending message:', error);
-        // Handle error gracefully (e.g., display an error message to the user)
+        // display an error message to the user
       }
     }
   };
@@ -34,7 +34,7 @@ const ChatBot = () => {
       setMessages(response.data.messages);
     } catch (error) {
       console.error('Error fetching messages:', error);
-      // Handle error gracefully (e.g., display an error message to the user)
+      // display an error message to the user)
     }
   };
 

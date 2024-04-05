@@ -50,7 +50,7 @@ const LoginScreen = ({ navigation }) => {
             shadowOpacity: 0.25,
             shadowRadius: 3.84,
             elevation: 5,
-            marginTop: 360, // Adjust this value as needed
+            marginTop: 360,
         },
         forgotPassword: {
             textDecorationLine: 'underline',

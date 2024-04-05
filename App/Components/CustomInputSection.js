@@ -1,7 +1,7 @@
 // CustomInputSection.js
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import CustomTextInput from './InternalComponents/CustomTextInput'; // Import your CustomTextInput component
+import CustomTextInput from './InternalComponents/CustomTextInput';
 import { useTheme } from '../Themes/ThemeProvider';
 
 const CustomInputSection = ({ title, inputs }) => {
@@ -57,7 +57,7 @@ const CustomInputSection = ({ title, inputs }) => {
                             onChangeText={input.onChangeText}
                             buttonStyle={styles.textInput}
                             textColor={colors.primary}
-                            borderColor={colors.secondary} // Adjust border color as needed
+                            borderColor={colors.secondary}
                         />
                     </View>
                 ))}
