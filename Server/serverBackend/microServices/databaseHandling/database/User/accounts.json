@@ -1,0 +1,14 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "$2b$10$ETOpWoqnx/v51qxEzmnJL.7tH7oWoi.tdc2dNtO3fWzzqlT9MeZgu",
+    "images": []
+  },
+  {
+    "name": "John Bob",
+    "email": "johnny@example.com",
+    "password": "$2b$10$7KBd4DAM/JyYGUmfkP6m0ucb/QM0zw4xexSEcxHmhhr0gSlJXlRcS",
+    "images": []
+  }
+]
