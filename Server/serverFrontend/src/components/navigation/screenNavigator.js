@@ -1,26 +1,28 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ThemeProvider from '../utils/themeProvider';
 import SettingScreen from '../../screens/settingsScreen';
+import DashboardScreen from '../../screens/dashboardScreen';
+import Header from '../dashboard/header';
 
 const Stack = createStackNavigator();
 
 const ScreenNavigator = () => {
+  console.log('previous done, loading view, file: screenNavigator.js');
   return (
-    <ThemeProvider darkMode={true}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Dashboard"
+          initialRouteName="Home"
           screenOptions={{
-            headerShown: false,
+            header: (props) => <Header {...props} />,
+            headerShown: true,
           }}
         >
-          <Stack.Screen name="Dashboard" component={SettingScreen} />
+          <Stack.Screen name="Home" component={DashboardScreen} />
+          <Stack.Screen name="Settings" component={SettingScreen} />
         </Stack.Navigator>
       </NavigationContainer>
-    </ThemeProvider>
   );
-}
+};
 
 export default ScreenNavigator;

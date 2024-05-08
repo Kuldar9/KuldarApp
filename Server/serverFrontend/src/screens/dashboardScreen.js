@@ -1,39 +1,69 @@
+// dashboardScreen.js
+console.log('Executing file: dashboardScreen.js');
 import React, { useContext } from 'react';
-import { View, StyleSheet } from 'react-native';
-import Header from '../components/dashboard/header';
-import Sidebar from '../components/dashboard/sidebar';
-import AdvancedChartsComponent from '../components/charts/charts';
-import AdvancedCirclesComponent from '../components/charts/circles';
-import { ThemeContext } from '../components/navigation/screenNavigator';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import { ThemeContext } from '../components/utils/themeProvider';
+import DualChartComponent from '../components/charts/dualCharts'; 
+import DualCircularCharts from '../components/charts/dualCircularCharts';
 
-const DashboardScreen = () => {
-  const themeColors = useContext(ThemeContext); // Get theme colors from context
+const DashboardScreen = ({ cpuUsage, memoryUsage }) => {
+  console.log('const DashboardScreen, file: dashboardScreen.js');
+  const colors = useContext(ThemeContext);
 
+  // More structured sample data for the charts
+  const sampleData1 = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [{
+      data: [20, 45, 28, 80, 99, 43],
+      color: (opacity = 1) => `rgba(255, 99, 132, ${opacity})`, // Red line color
+      strokeWidth: 2
+    }]
+  };
+
+  const sampleData2 = {
+    labels: ['July', 'August', 'September', 'October', 'November', 'December'],
+    datasets: [{
+      data: [65, 59, 80, 81, 56, 55],
+      color: (opacity = 1) => `rgba(54, 162, 235, ${opacity})`, // Blue line color
+      strokeWidth: 2
+    }]
+  };
+
+  console.log('previous done, loading view, file: dashboardScreen.js');
   return (
-    <View style={[styles.container, { backgroundColor: themeColors.background }]}>
-      <Header themeColors={themeColors} />
-      <View style={styles.contentContainer}>
-        <Sidebar themeColors={themeColors} />
-        <View style={styles.mainContent}>
-          <AdvancedChartsComponent themeColors={themeColors} />
-          <AdvancedCirclesComponent themeColors={themeColors} />
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1, backgroundColor: colors.background }}
+        showsVerticalScrollIndicator={false}
+        scrollEventThrottle={16}
+      >
+        <View style={[styles.container, { minHeight: '100%' }]}>
+          <View style={styles.chartContainer}>
+            <DualChartComponent
+              data1={sampleData1}
+              data2={sampleData2}
+            />
+          </View>
+          <View style={styles.chartContainer}>
+            <DualCircularCharts
+              cpuUsage={50}
+              memoryUsage={80}
+              cpuText="CPU Usage"
+              memoryText="Memory Usage"
+            />
+          </View>
         </View>
-      </View>
-    </View>
+      </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  contentContainer: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  mainContent: {
-    flex: 1,
-    flexDirection: 'column',
+  chartContainer: {
+    marginBottom: 20,
   },
 });
 

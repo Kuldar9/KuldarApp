@@ -3,7 +3,10 @@ const chroma = require('chroma-js');
 
 // Function to fetch color information from the Color API
 export async function getColorInfo(hexColor) {
-    const url = `https://www.thecolorapi.com/id?hex=${hexColor}&format=json`;
+    console.log('function getColorInfo, file: colorGen.js');
+    // Remove "#" symbol if it exists
+    const cleanHexColor = hexColor.startsWith('#') ? hexColor.slice(1) : hexColor;
+    const url = `https://www.thecolorapi.com/id?hex=${cleanHexColor}&format=json`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -16,6 +19,7 @@ export async function getColorInfo(hexColor) {
 
 // Function to generate a palette based on the Color API response
 export function generatePalette(colorInfo, type) {
+    console.log('function generatePalette, file: colorGen.js');
     const baseColor = chroma(colorInfo.hex.value);
 
     // Check luminance of the base color

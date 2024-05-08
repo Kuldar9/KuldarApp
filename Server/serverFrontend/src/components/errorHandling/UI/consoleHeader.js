@@ -1,22 +1,17 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import IconButton from '../common/iconButton';
-import { ThemeContext } from '../utils/themeProvider';
+import IconButton from '../../common/iconButton';
+import { ThemeContext } from '../../utils/themeProvider';
 
-const Header = ({ navigation }) => {
+const Header = ({ onClose }) => {
+    console.log('const Header, file: consoleHeader.js');
     const { secondaryBackground, primaryText, border } = useContext(ThemeContext);
-
-    const handleNavigation = (routeName) => {
-        navigation.navigate(routeName);
-    };
-    console.log('previous done, loading view, file: textInput.js');
+    console.log('previous done, loading view, file: consoleHeader.js');
     return (
         <View style={[styles.container, { backgroundColor: secondaryBackground, borderBottomColor: border }]}>
-            <Text style={[styles.title, { color: primaryText }]}>Dashboard</Text>
+            <Text style={[styles.title, { color: primaryText }]}>Debug Console</Text>
             <View style={styles.buttonsContainer}>
-                <IconButton iconName="home-outline" onPress={() => handleNavigation('Home')} />
-                <IconButton iconName="terminal-outline" onPress={() => handleNavigation('Console')} />
-                <IconButton iconName="settings-outline" onPress={() => handleNavigation('Settings')} />
+                <IconButton iconName="arrow-back-outline" onPress={onClose} />
             </View>
         </View>
     );

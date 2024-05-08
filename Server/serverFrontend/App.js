@@ -1,19 +1,13 @@
-// App.js
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import ScreenNavigator from './src/components/navigation/screenNavigator';
-import ErrorBoundary from './src/components/utils/errorBoundary';
+import React from 'react';
+import ErrorBoundary from './src/components/errorHandling/errorBoundary';
+import ThemeProvider from './src/components/utils/themeProvider';
 
-class App extends Component {
-  render() {
-    return (
-      <ErrorBoundary>
-        <View style={{ flex: 1 }}>
-          <ScreenNavigator />
-        </View>
-      </ErrorBoundary>
-    );
-  }
-}
+// configurations currently available
+console.log('Loading view, file: App.js');
+const App = () => (
+    <ThemeProvider darkMode={true}>
+      <ErrorBoundary errorMode={"developer"}/> {/* normal, developer */}
+    </ThemeProvider>
+);
 
 export default App;

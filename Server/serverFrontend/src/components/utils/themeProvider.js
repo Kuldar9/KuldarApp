@@ -4,7 +4,6 @@ import { View, StyleSheet } from 'react-native';
 
 export const ThemeContext = createContext();
 
-// Renamed for clarity
 const themeLight = {
   background: '#F5F5F5',
   secondaryBackground: '#E0E0E0',
@@ -24,18 +23,19 @@ const themeDark = {
 };
 
 const ThemeProvider = ({ children, darkMode }) => {
+  console.log('const ThemeProvider, file: themeProvider.js');
   const [colors, setColors] = useState(darkMode ? themeDark : themeLight);
 
   useEffect(() => {
     setColors(darkMode ? themeDark : themeLight);
   }, [darkMode]);
-
+  console.log('previous done, loading view, file: themeProvider.js');
   return (
-    <ThemeContext.Provider value={colors}>
-      <View style={[styles.container, { backgroundColor: colors.background }]}>
-        {children}
-      </View>
-    </ThemeContext.Provider>
+      <ThemeContext.Provider value={colors}>
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
+          {children}
+        </View>
+      </ThemeContext.Provider>
   );
 };
 
