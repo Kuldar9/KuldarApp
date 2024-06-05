@@ -25,7 +25,7 @@
     "node-fetch": "^3.3.2",
     "pidusage": "^3.0.2",
     "socket.io": "^4.7.5",
-    "ws": "^8.16.0"
+    "ws": "^8.17.0"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.22.0",
