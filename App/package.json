@@ -9,10 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native": "^7.0.14",
     "@react-navigation/stack": "^6.3.29",
     "axios": "^1.6.8",
-    "expo": "^49.0.23",
+    "expo": "^50.0.0",
     "node-fetch": "^3.3.2",
     "node-vibrant": "^3.2.1-alpha.1",
     "react": "^18.2.0",
