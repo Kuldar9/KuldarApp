@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.15.2",
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^6.0.0",
     "body-parser": "^1.20.4",
     "child_process": "^1.0.2",
     "chroma-js": "^2.4.2",
@@ -21,9 +21,9 @@
     "express": "^4.22.1",
     "form-data": "^4.0.5",
     "http": "^0.0.1-security",
-    "http-proxy-middleware": "^3.0.0",
-    "mongoose": "^8.3.0",
-    "multer": "^1.4.5-lts.1",
+    "http-proxy-middleware": "^3.0.5",
+    "mongoose": "^8.22.1",
+    "multer": "^2.1.1",
     "node-fetch": "^3.3.2",
     "socket.io": "^4.8.3",
     "ws": "^8.16.0"
