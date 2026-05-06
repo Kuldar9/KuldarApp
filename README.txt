@@ -58,8 +58,8 @@ CURRENT PROJECT STATUS
 ----------------------
 The project is a Functional Technical Proof of Concept.
 [X] Active Connectivity: Frontend-to-Backend terminal communication.
-[X] Microservice Pipeline: Working request pipeline to the Python Color Processor.
-[X] Data Persistence: Functioning account and theme data logging via JSON.
+[X] Microservice Pipeline: Working request pipeline to the Python Color Processor. (Via test file)
+[ ] Data Persistence: Functioning account and theme data logging via JSON. 
 [ ] Next Steps: Finalizing Azure Bot resource registration and migrating to 
     managed database storage.
 
