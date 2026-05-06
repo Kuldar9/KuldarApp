@@ -1,7 +1,7 @@
 // Support.js
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider';
+import { useTheme } from '../Themes/theme';
 
 const SupportScreen = () => {
   const { colors } = useTheme();

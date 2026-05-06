@@ -1,22 +1,29 @@
 {
-  "name": "App",
+  "name": "syncura",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "start": "npx expo start --web",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/webpack-config": "^19.0.0",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.3.29",
     "axios": "^1.6.8",
     "expo": "^49.0.23",
+    "lucide-react-native": "^0.441.0",
+    "moment": "^2.30.1",
     "node-fetch": "^3.3.2",
     "node-vibrant": "^3.2.1-alpha.1",
     "react": "^18.2.0",
-    "react-native": "^0.73.5"
+    "react-dom": "18.2.0",
+    "react-native": "^0.73.5",
+    "react-native-gesture-handler": "^2.20.0",
+    "react-native-web": "~0.19.6",
+    "expo-image-picker": "~14.3.2"
   },
   "private": true,
   "devDependencies": {

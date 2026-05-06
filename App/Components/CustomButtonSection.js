@@ -1,13 +1,11 @@
-// CustomButtonSection.js
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import CustomButton from './InternalComponents/CustomButton';
-import { useTheme } from '../Themes/ThemeProvider';
+import { useTheme } from '../Themes/theme';
 
 const CustomButtonSection = ({ title, buttons }) => {
     const { colors } = useTheme();
 
-    // Define styles within the component using colors from useTheme
     const styles = StyleSheet.create({
         buttonsContainer: {
             flexDirection: 'row',
@@ -21,7 +19,7 @@ const CustomButtonSection = ({ title, buttons }) => {
             paddingHorizontal: 20,
             paddingTop: 20,
             paddingBottom: 10,
-            backgroundColor: colors.button.transparent.background, // Use transparent button background color from the theme
+            backgroundColor: colors.background, 
             marginBottom: 20,
             borderRadius: 15,
             overflow: 'hidden',
@@ -30,32 +28,31 @@ const CustomButtonSection = ({ title, buttons }) => {
             fontSize: 20,
             fontWeight: 'bold',
             marginBottom: 10,
-            color: colors.text, // Using colors from useTheme
+            color: colors.text,
         },
         button: {
-            flexDirection: 'row', // Change to row to display text and image horizontally
+            flexDirection: 'row', 
             alignItems: 'center',
-            backgroundColor: colors.button.transparent.background, // Use transparent button background color from the theme
+            backgroundColor: colors.card,
             borderWidth: 2,
             borderRadius: 15,
             paddingVertical: 10,
             paddingHorizontal: 20,
             marginHorizontal: 5,
-            borderColor: colors.primary, // Use primary color for button border
+            borderColor: colors.primary, 
         },
     });
 
     return (
         <View style={styles.sectionContainer}>
-            <Text style={[styles.sectionTitle]}>{title}</Text>
+            <Text style={styles.sectionTitle}>{title}</Text>
             <View style={styles.buttonsContainer}>
                 {buttons.map((button, index) => (
                     <CustomButton
                         key={index}
                         title={button.title}
-                        onPress={() => {}}
+                        onPress={button.onPress}
                         buttonStyle={styles.button}
-                        // Set text color directly within the CustomButton component
                         textColor={colors.text}
                         imageSource={button.image}
                     />

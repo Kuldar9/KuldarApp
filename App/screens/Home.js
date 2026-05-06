@@ -1,9 +1,13 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, View } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider';
-import CustomHeader from '../Components/Header';
+import { useTheme } from '../Themes/theme';
 import CustomButtonSection from '../Components/CustomButtonSection';
-import BottomBar from '../Components/BottomBar';
+
+// Dummy user
+const user = {
+    name: "Kuldar",
+    isAdmin: true,
+}
 
 // Define userButtons
 const userButtons = [
@@ -25,17 +29,20 @@ const adminButtons = [
     // Add more buttons as needed
 ];
 
+
+
 const HomeScreen = () => {
     const { backgroundImage } = useTheme();
 
     return (
         <ImageBackground source={backgroundImage} style={styles.background}>
-            <CustomHeader title="Home" />
             <View style={styles.container}>
+                {/* User section */}
                 <CustomButtonSection title="User Section" buttons={userButtons} />
-                <CustomButtonSection title="Admin Section" buttons={adminButtons} />
+
+                {/* Conditionally render admin section if the user is an admin */}
+                {user.isAdmin ? <CustomButtonSection title="Admin Section" buttons={adminButtons} /> : null}
             </View>
-            <BottomBar/>
         </ImageBackground>
     );
 };

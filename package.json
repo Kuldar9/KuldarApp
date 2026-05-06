@@ -1,0 +1,27 @@
+{
+  "name": "kuldarapp",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "App",
+    "DiscordBot",
+    "Server/serverBackend",
+    "Server/serverFrontend",
+    "TeamsBot"
+  ],
+  "scripts": {
+    "install-all": "npm install && npm install --workspaces",
+    "clean": "npm run clean-modules && npm run clean-locks",
+    "clean-modules": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+    "clean-locks": "find . -name \"package-lock.json\" -delete",
+    "server-backend": "npm start --workspace=Server/serverBackend",
+    "server-frontend": "npm start --workspace=Server/serverFrontend",
+    "frontend": "npm start --workspace=App",
+    "teams": "npm start --workspace=TeamsBot",
+    "discord": "npm start --workspace=DiscordBot",
+    "dev": "concurrently \"npm run server-backend\" \"npm run server-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

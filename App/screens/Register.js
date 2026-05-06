@@ -1,7 +1,7 @@
 // Register.js
 import React from 'react';
 import { View, Button } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider';
+import { useTheme } from '../Themes/theme';
 
 const RegisterScreen = ({ navigation }) => {
     const { buttonStyle, buttonTextStyle } = useTheme();

@@ -1,0 +1,116 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:25577
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:21:42] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\log.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:25577
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:24:11] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:25577
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:26:54] "GET /api/health HTTP/1.1" 200 -
+INFO:root:Processing image: test_image.jpg
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:28:02] "[35m[1mPOST /process-image HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:25577
+ * Running on http://192.168.1.160:25577
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:33:23] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:25577
+ * Running on http://192.168.1.160:25577
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2024 17:47:33] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\image_processor1.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\image_processor1.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\Image_processor1.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:50:15] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:50:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:50:32] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\Image_processor1.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:root:Processing image: test_image.jpg
+INFO:root:Successfully processed image: test_image.jpg
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:52:31] "POST /process-image HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\image_processor1.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:root:Processing image: test_image.jpg
+INFO:root:Successfully processed image: test_image.jpg
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:54:55] "POST /process-image HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-420-992
+INFO:root:Processing image: test_image.jpg
+INFO:root:Successfully processed image: test_image.jpg
+INFO:werkzeug:192.168.1.2 - - [07/Apr/2024 17:57:13] "POST /process-image HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Kuldar\\Desktop\\FirstMassiveProject\\server\\backend\\microServices\\imageProcessing\\server.py', reloading
+INFO:werkzeug: * Restarting with stat

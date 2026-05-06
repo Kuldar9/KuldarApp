@@ -1,7 +1,7 @@
 /*// index.js
 const axios = require('axios');
 
-const SERVER_URL = 'http://90.191.79.223:25575'; // Update with your server URL
+const SERVER_URL = 'http://90.191.79.223:25575'; 
 
 const sendMessageToServer = async (message) => {
     try {

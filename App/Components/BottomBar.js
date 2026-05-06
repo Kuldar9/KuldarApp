@@ -1,19 +1,17 @@
-// BottomBar.js
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider'; 
+import { useTheme } from '../Themes/theme'; 
 import { useNavigation } from '@react-navigation/native';
 
 const BottomBar = ({ activeButton, onPress }) => { 
   const navigation = useNavigation();
-  const { colors } = useTheme(); // Accessing colors from the theme
+  const { colors } = useTheme(); 
 
-  // Define styles within the component
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: colors.button.transparent.background, // Match the background color of the header
-      borderRadius: 15, // Rounded corners
-      opacity: 0.8, // Semi-transparent
+      backgroundColor: colors.transparent,
+      borderRadius: 15,
+      opacity: 0.8,
     },
     bottomContainer: {
       flexDirection: 'row',
@@ -30,7 +28,7 @@ const BottomBar = ({ activeButton, onPress }) => {
       marginHorizontal: 5,
     },
     activeButton: {
-      backgroundColor: colors.secondary, // Using secondary color for active buttons
+      backgroundColor: colors.primary,
     },
     inactiveButton: {
       backgroundColor: 'transparent',
@@ -43,17 +41,15 @@ const BottomBar = ({ activeButton, onPress }) => {
     text: {
       fontSize: 16,
       fontWeight: 'bold',
-      color: colors.text, // Using text color from theme
+      color: colors.text, 
     },
   });
 
-  // Define button data with names and corresponding GIFs
   const buttons = [
     { name: 'Home', gif: require('../Assets/icons/home.gif') },
     { name: 'Chatbot', gif: require('../Assets/icons/messages-icon.gif') },
     { name: 'Calendar', gif: require('../Assets/icons/calendar.gif') },
     { name: 'More', gif: require('../Assets/icons/more.gif') },
-    // Add more buttons as needed
   ];
 
   return (

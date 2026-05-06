@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, StyleSheet, ImageBackground, ScrollView, Dimensions } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider'; 
+import { useTheme } from '../Themes/theme'; 
 import CustomButton from '../Components/InternalComponents/CustomButton';
 import WelcomeSection from '../Components/WelcomeSection';
 import PaginationDots from '../Components/PaginationDots';
@@ -90,7 +90,7 @@ const WelcomeScreen = ({ navigation }) => {
                 <CustomButton
                     title="Get Started"
                     onPress={() => navigation.navigate('Login')}
-                    buttonStyle={{ borderColor: colors.secondary }} 
+                    buttonStyle={{ borderColor: colors.primary }} 
                     textColor={colors.text}
                 />
             </View>   

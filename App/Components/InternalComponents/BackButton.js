@@ -1,41 +1,42 @@
-// BackButton.js
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
-import { useTheme } from '../../Themes/ThemeProvider'; // Import useTheme from ThemeProvider
+import { Pressable, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; 
+import { useTheme } from '../../Themes/theme'; 
 
 const BackButton = () => {
-  const navigation = useNavigation(); // Accessing navigation from useNavigation hook
-  const { colors } = useTheme(); // Accessing colors from the theme
+  const navigation = useNavigation(); 
+  const { colors } = useTheme(); 
 
-  // Function to handle press event
   const handlePress = () => {
-    navigation.goBack(); // Navigate back
+    navigation.goBack(); 
   };
 
   const styles = StyleSheet.create({
     button: {
-      // Apply button styles
       padding: 10,
     },
     image: {
-      // Apply image styles
-      width: 40, // Set width
-      height: 40, // Set height
-      tintColor: colors.text, // Apply text color from theme
+      width: 40,
+      height: 40,
+      tintColor: colors.text, 
     },
   });
 
   return (
-    <TouchableOpacity
+    <Pressable
       onPress={handlePress}
-      style={styles.button} // Apply button styles
+      style={({ pressed }) => [
+        styles.button,
+        {
+          opacity: pressed ? 0.7 : 1, // Optional: adds visual feedback when pressed
+        },
+      ]}
     >
       <Image
-        source={require('../../Assets/icons/back.gif')} // Use GIF source
+        source={require('../../Assets/icons/back.gif')}
         style={styles.image}
       />
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

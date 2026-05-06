@@ -1,31 +1,27 @@
-// WelcomeSection.js
 import React, { useEffect, useRef } from 'react';
 import { StyleSheet, Text, Animated, Image, Easing } from 'react-native';
-import { useTheme } from '../Themes/ThemeProvider'; // Import useTheme hook
+import { useTheme } from '../Themes/theme'; 
 
 const WelcomeSection = ({ title, description, image }) => {
-    const { colors, dimensions } = useTheme(); // Use colors and dimensions from theme
+    const { colors, dimensions } = useTheme(); 
     const fadeInAnim = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
-        Animated.timing(
-            fadeInAnim,
-            {
-                toValue: 1,
-                duration: 1000,
-                easing: Easing.ease,
-                useNativeDriver: true,
-            }
-        ).start();
+        Animated.timing(fadeInAnim, {
+            toValue: 1,
+            duration: 1000,
+            easing: Easing.ease,
+            useNativeDriver: true,
+        }).start();
     }, [fadeInAnim]);
 
     const styles = StyleSheet.create({
         section: {
-            backgroundColor: colors.background,
+            backgroundColor: colors.card,
             borderRadius: 15,
             padding: 20,
             marginBottom: 20,
-            width: dimensions.windowWidth - 32, // Accessing windowWidth from dimensions
+            width: dimensions.windowWidth - 32, 
             marginHorizontal: 16,
             shadowColor: '#000',
             shadowOffset: {
@@ -36,7 +32,7 @@ const WelcomeSection = ({ title, description, image }) => {
             shadowRadius: 3.84,
             elevation: 5,
             alignItems: 'center',
-            opacity: fadeInAnim, // Using animated opacity
+            opacity: fadeInAnim,
         },
         title: {
             fontSize: 24,
@@ -47,7 +43,7 @@ const WelcomeSection = ({ title, description, image }) => {
         description: {
             fontSize: 16,
             marginBottom: 15,
-            color: colors.secondary,
+            color: colors.subText,
         },
         image: {
             width: 150,

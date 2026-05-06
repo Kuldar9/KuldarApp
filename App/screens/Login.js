@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ImageBackground, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import CustomButton from '../Components/InternalComponents/CustomButton';
 import CustomTextInput from '../Components/InternalComponents/CustomTextInput';
-import { useTheme } from '../Themes/ThemeProvider';
-import Header from '../Components/Header';
+import { useTheme } from '../Themes/theme';
 
 const LoginScreen = ({ navigation }) => {
     const { backgroundImage, colors } = useTheme();
@@ -37,9 +36,10 @@ const LoginScreen = ({ navigation }) => {
             justifyContent: 'center',
         },
         container: {
+            flex: 1,
             paddingHorizontal: 20,
             alignItems: 'center',
-            backgroundColor: colors.button.transparent.background,
+            backgroundColor: colors.background,
             borderRadius: 15,
             padding: 20,
             shadowColor: '#000',
@@ -50,7 +50,13 @@ const LoginScreen = ({ navigation }) => {
             shadowOpacity: 0.25,
             shadowRadius: 3.84,
             elevation: 5,
-            marginTop: 360,
+            marginTop: 20, // Adjusted to allow space for the GIF
+        },
+        gif: {
+            width: '100%', // Full width for responsiveness
+            height: 200, // Adjust height as needed
+            resizeMode: 'contain', // Keep aspect ratio
+            marginBottom: 20, // Space between GIF and inputs
         },
         forgotPassword: {
             textDecorationLine: 'underline',
@@ -84,7 +90,7 @@ const LoginScreen = ({ navigation }) => {
         button: {
             flexDirection: 'row',
             alignItems: 'center',
-            backgroundColor: colors.button.transparent.background,
+            backgroundColor: colors.background,
             borderWidth: 2,
             borderRadius: 15,
             paddingVertical: 10,
@@ -93,14 +99,24 @@ const LoginScreen = ({ navigation }) => {
             borderColor: colors.primary,
             marginTop: 20,
         },
+        sectionTitle: {
+            textAlign: 'center',
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: colors.text,
+            marginBottom: 10,
+        },
     });
 
     return (
         <ImageBackground source={backgroundImage} style={styles.background}>
-            <Header navigation={navigation} showProfileButton={false} showHeaderText={false} showOptionsList={false} />
             <View style={styles.container}>
+                <Image 
+                    source={require('../Assets/icons/profile-icon.gif')}
+                    style={styles.gif}
+                />
                 <View style={styles.inputSection}>
-                    <Text style={[styles.sectionTitle]}>Login</Text>
+                    <Text style={styles.sectionTitle}>Login</Text>
                     <View style={styles.inputsContainer}>
                         {inputs.map((input, index) => (
                             <View key={index} style={styles.inputContainer}>
@@ -108,15 +124,14 @@ const LoginScreen = ({ navigation }) => {
                                     title={input.title}
                                     onChangeText={input.onChangeText}
                                     buttonStyle={styles.textInput}
-                                    textColor={colors.primary}
-                                    borderColor={colors.secondary}
+                                    textColor={colors.text}
                                 />
                             </View>
                         ))}
                     </View>
                 </View>
                 <TouchableOpacity onPress={() => setRememberMe(!rememberMe)} style={styles.rememberMeContainer}>
-                    <View style={[styles.checkbox, { borderColor: colors.primary }]}>
+                    <View style={[styles.checkbox, { borderColor: colors.text }]}>
                         {rememberMe && <View style={styles.checked} />}
                     </View>
                     <Text style={styles.rememberMeText}>Remember Me</Text>
@@ -125,7 +140,7 @@ const LoginScreen = ({ navigation }) => {
                     title="Login"
                     onPress={handleLogin}
                     buttonStyle={styles.button}
-                    textColor={colors.primary}
+                    textColor={colors.text}
                 />
                 <Text
                     style={styles.forgotPassword}

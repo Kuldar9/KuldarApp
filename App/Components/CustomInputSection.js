@@ -1,13 +1,11 @@
-// CustomInputSection.js
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import CustomTextInput from './InternalComponents/CustomTextInput';
-import { useTheme } from '../Themes/ThemeProvider';
+import { useTheme } from '../Themes/theme';
 
 const CustomInputSection = ({ title, inputs }) => {
     const { colors } = useTheme();
 
-    // Define styles within the component using colors from useTheme
     const styles = StyleSheet.create({
         inputsContainer: {
             paddingHorizontal: 20,
@@ -20,7 +18,7 @@ const CustomInputSection = ({ title, inputs }) => {
             paddingHorizontal: 20,
             paddingTop: 20,
             paddingBottom: 10,
-            backgroundColor: colors.button.transparent.background, // Use transparent button background color from the theme
+            backgroundColor: colors.card, 
             marginBottom: 20,
             borderRadius: 15,
             overflow: 'hidden',
@@ -29,7 +27,7 @@ const CustomInputSection = ({ title, inputs }) => {
             fontSize: 20,
             fontWeight: 'bold',
             marginBottom: 10,
-            color: colors.text, // Using colors from useTheme
+            color: colors.text,
         },
         inputContainer: {
             marginBottom: 10,
@@ -48,16 +46,19 @@ const CustomInputSection = ({ title, inputs }) => {
 
     return (
         <View style={styles.sectionContainer}>
-            <Text style={[styles.sectionTitle]}>{title}</Text>
+            <Text style={styles.sectionTitle}>{title}</Text>
             <View style={styles.inputsContainer}>
                 {inputs.map((input, index) => (
                     <View key={index} style={styles.inputContainer}>
                         <CustomTextInput
                             title={input.title}
                             onChangeText={input.onChangeText}
-                            buttonStyle={styles.textInput}
-                            textColor={colors.primary}
-                            borderColor={colors.secondary}
+                            buttonStyle={[
+                                styles.textInput,
+                                { borderColor: input.borderColor || colors.secondary }
+                            ]}
+                            textColor={input.textColor || colors.text} // Default to theme's text color
+                            borderColor={input.borderColor || colors.secondary} // Default to theme's border color
                         />
                     </View>
                 ))}
